@@ -44,6 +44,9 @@ set mouse=a
 " No line break
 set nowrap
 
+" Set 256 colors
+set t_Co=256
+
 " Setting monokai theme (~/.vim/colors/)
 " colorscheme molokai
 let g:gruvbox_invert_selection=0
