@@ -10,11 +10,26 @@ To install, run
 $ ./install.sh
 ```
 
+Make sure to install [vundle](https://github.com/VundleVim/Vundle.vim) after by executing:
+
+```bash
+$ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+```
+
+Finally, open vim and run:
+
+```bash
+:PluginInstall
+```
+
 ### Requirements
 
 * vim
 * tmux
-* [vundle](https://github.com/VundleVim/Vundle.vim)
+
+### Problems
+
+If airline fonts don't show correctly, make sure to install [PowerLine Fonts](https://github.com/powerline/fonts) and to configure your terminal profile font to one of that fonts
 
 ### Screenshots
 
