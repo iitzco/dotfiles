@@ -1,5 +1,7 @@
 # My dotfiles
 
+Make sure to clone or download this repository in $HOME. If not, you will need to edit the install scripts (*install.sh* and *zsh-prezto.sh*) to match the new location of the files when making the symbolic links.
+
 ## vim + tmux
 
 ### Installation of Vim + Tmux

@@ -8,10 +8,10 @@ rm -f ~/.gitignore_global
 rm -f ~/.tmux.conf
 
 echo "Symlinking files"
-ln -sr vimrc ~/.vimrc
-ln -sr vim ~/.vim
-ln -sr gitconfig ~/.gitconfig
-ln -sr gitignore_global ~/.gitignore_global
-ln -sr tmux.conf ~/.tmux.conf
+ln -s ~/dotfiles/vimrc ~/.vimrc
+ln -s ~/dotfiles/vim ~/.vim
+ln -s ~/dotfiles/gitconfig ~/.gitconfig
+ln -s ~/dotfiles/gitignore_global ~/.gitignore_global
+ln -s ~/dotfiles/tmux.conf ~/.tmux.conf
 
 echo "Done."
