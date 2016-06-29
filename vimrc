@@ -2,7 +2,7 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
-set encoding=utf-8 
+set encoding=utf-8
 
 " set the runtime path to include Vundle and initialize
 
@@ -15,7 +15,6 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tpope/vim-commentary'
-Plugin 'msanders/snipmate.vim'
 Plugin 'neovimhaskell/haskell-vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'morhetz/gruvbox'
@@ -24,6 +23,7 @@ Plugin 'othree/html5.vim'
 Plugin 'alvan/vim-closetag'
 Plugin 'vim-scripts/AutoComplPop'
 Plugin 'terryma/vim-multiple-cursors'
+Plugin 'scrooloose/syntastic'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -103,7 +103,7 @@ let g:ctrlp_custom_ignore = {
 set backspace=2
 
 " Set autocompletition to snipmate (only with uppercase)
-let g:acp_behaviorSnipmateLength = 1
+" let g:acp_behaviorSnipmateLength = 1
 
 
 " Config for multiple cursors
@@ -121,3 +121,19 @@ nnoremap <C-c> :call multiple_cursors#quit()<CR>
 
 nnoremap ; :
 nnoremap : ;
+
+" Syntastic settings
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 1
+let g:syntastic_auto_loc_list = 0
+let g:syntastic_enable_highlighting = 0
+let g:syntastic_stl_format = "Error: line:%F (%t)"
+let g:syntastic_error_symbol = "✗"
+let g:syntastic_warning_symbol = "⚠"
