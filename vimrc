@@ -24,6 +24,7 @@ Plugin 'alvan/vim-closetag'
 Plugin 'vim-scripts/AutoComplPop'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'scrooloose/syntastic'
+Plugin 'junegunn/goyo.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -88,7 +89,7 @@ let g:airline_theme='gruvbox'
 let g:airline_powerline_fonts = 1
 
 " Open NerdTree with Ctrl-N
-map <C-n> :NERDTreeToggle<CR>
+nnoremap <C-n> :NERDTreeToggle<CR>
 
 " Add octave/matlab comment support
 autocmd FileType matlab setlocal commentstring=%\ %s
@@ -137,3 +138,10 @@ let g:syntastic_enable_highlighting = 0
 let g:syntastic_stl_format = "Error: line:%F (%t)"
 let g:syntastic_error_symbol = "✗"
 let g:syntastic_warning_symbol = "⚠"
+
+" Goyo setup
+
+nnoremap min :Goyo<CR>
+
+let g:goyo_width=100
+let g:goyo_height=100
