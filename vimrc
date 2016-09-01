@@ -25,6 +25,12 @@ Plugin 'vim-scripts/AutoComplPop'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'scrooloose/syntastic'
 Plugin 'junegunn/goyo.vim'
+Plugin 'jlanzarotta/bufexplorer'
+" Plugin 'edkolev/tmuxline.vim'
+" Plugin 'vim-ctrlspace/vim-ctrlspace'
+" Plugin 'Valloric/YouCompleteMe'
+" Plugin 'SirVer/ultisnips'
+" Plugin 'honza/vim-snippets'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -57,8 +63,8 @@ let g:gruvbox_contrast_dark='hard'
 
 " let g:gruvbox_italicize_strings=1
 
-colorscheme gruvbox
 set background=dark
+colorscheme gruvbox
 
 " Enable line numbers
 set number
@@ -87,6 +93,7 @@ set laststatus=2
 " let g:airline_theme='molokai'
 let g:airline_theme='gruvbox'
 let g:airline_powerline_fonts = 1
+" let g:airline#extensions#tabline#enabled = 1
 
 " Open NerdTree with Ctrl-N
 nnoremap <C-n> :NERDTreeToggle<CR>
@@ -123,6 +130,13 @@ nnoremap <C-c> :call multiple_cursors#quit()<CR>
 nnoremap ; :
 nnoremap : ;
 
+" Remapping movement between splits
+
+nnoremap <C-j> <C-w>j
+nnoremap <C-h> <C-w>h
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
 " Syntastic settings
 
 set statusline+=%#warningmsg#
@@ -131,7 +145,7 @@ set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 1
 let g:syntastic_auto_loc_list = 0
 let g:syntastic_enable_highlighting = 0
@@ -145,3 +159,17 @@ nnoremap min :Goyo<CR>
 
 let g:goyo_width=100
 let g:goyo_height=100
+
+" YCM Settings
+
+" let g:ycm_min_num_of_chars_for_completion = 3
+" let g:ycm_autoclose_preview_window_after_completion = 1
+" let g:ycm_autoclose_preview_window_after_insertion = 1
+" let g:ycm_key_list_select_completion=[]
+" let g:ycm_key_list_previous_completion=[]
+" set completeopt-=preview
+
+nmap \\ \bt
+
+nmap z o<Esc>
+nmap Z O<Esc>
