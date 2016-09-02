@@ -33,6 +33,18 @@ Finally, open vim and run:
 
 If airline fonts don't show correctly, make sure to install [PowerLine Fonts](https://github.com/powerline/fonts) and to configure your terminal profile font to one of that fonts
 
+## git
+
+Checkout *gitconfig* file to see git alias. If you want to use them, run
+
+```bash
+$ ./git.sh
+```
+
+Remember to change [user] section with your information.
+
+IMPORTANT: you will lose previous gitconfig file. Make sure to backup it.
+
 ### Screenshots
 
 ## Zsh with prezto
