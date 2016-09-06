@@ -85,7 +85,7 @@ set shiftwidth=4
 set expandtab
 
 " Increase update time (default 4000) for gitgutter
-set updatetime=500
+set updatetime=1000
 
 
 " Airline conf

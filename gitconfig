@@ -15,7 +15,6 @@
     delete = branch -d
     rename = commit --amend -m
 [core]
-	excludesfile = /Users/ivanitz/.gitignore_global
 	editor = vim
 [push]
 	default = simple
