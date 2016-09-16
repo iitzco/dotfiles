@@ -77,6 +77,8 @@ set hidden
 " Enable search highlight
 set hls
 
+set incsearch " search as characters are enetered
+
 " show existing tab with 4 spaces width
 set tabstop=4
 " when indenting with '>', use 4 spaces width
@@ -173,3 +175,7 @@ nmap \\ \bt
 
 nmap z o<Esc>
 nmap Z O<Esc>
+
+set wildmenu " visual autocomplete for command menu
+
+set lazyredraw " redraw only when we need to
