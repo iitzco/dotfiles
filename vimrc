@@ -26,6 +26,13 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'scrooloose/syntastic'
 Plugin 'junegunn/goyo.vim'
 Plugin 'jlanzarotta/bufexplorer'
+Plugin 'kshenoy/vim-signature'
+Plugin 'maxbrunsfeld/vim-yankstack'
+Plugin 'tpope/vim-fugitive'
+Plugin 'editorconfig/editorconfig-vim'
+Plugin 'reedes/vim-pencil'
+Plugin 'reedes/vim-colors-pencil'
+" Plugin 'itchyny/lightline.vim'
 " Plugin 'edkolev/tmuxline.vim'
 " Plugin 'vim-ctrlspace/vim-ctrlspace'
 " Plugin 'Valloric/YouCompleteMe'
@@ -68,7 +75,7 @@ colorscheme gruvbox
 
 " Enable line numbers
 set number
-set cursorline
+" set cursorline
 set showmatch
 
 " Enable switch buffer without saving
@@ -87,7 +94,7 @@ set shiftwidth=4
 set expandtab
 
 " Increase update time (default 4000) for gitgutter
-set updatetime=1000
+set updatetime=2000
 
 
 " Airline conf
@@ -114,7 +121,7 @@ set backspace=2
 
 " Set autocompletition to snipmate (only with uppercase)
 " let g:acp_behaviorSnipmateLength = 1
-
+let g:acp_behaviorKeywordLength = 3
 
 " Config for multiple cursors
 
@@ -179,3 +186,51 @@ nmap Z O<Esc>
 set wildmenu " visual autocomplete for command menu
 
 set lazyredraw " redraw only when we need to
+
+" For vim-Signify to match gitgutter colors
+
+let g:SignatureMarkTextHLDynamic = 1
+let g:SignatureMarkerTextHLDynamic = 1
+
+nmap [p <Plug>yankstack_substitute_older_paste
+nmap [P <Plug>yankstack_substitute_newer_paste
+
+let g:matchparen_timeout = 2
+let g:matchparen_insert_timeout = 2
+
+map K <Plug>(expand_region_expand)
+map J <Plug>(expand_region_shrink)
+
+set sidescroll=1
+
+
+set splitbelow
+set splitright
+
+" highlight all tabs and trailing whitespace characters.
+" highlight ExtraWhitespace ctermbg=darkgreen guibg=darkgreen
+" match ExtraWhitespace /\s\+$\|\t/
+
+
+set ignorecase          " Make searching case insensitive
+set smartcase           " ... unless the query has capital letters.
+set gdefault            " Use 'g' flag by default with :s/foo/bar/.
+set magic               " Use 'magic' patterns (extended regular expressions).
+
+" ---------------- Prose ----------------
+function! Prose()
+    call pencil#init()
+    SoftPencil
+    let g:pencil#textwidth = 100
+    set conceallevel=0
+    colorscheme pencil
+    set background=dark
+    AcpDisable
+    Goyo
+    hi markdownBold cterm=bold
+    hi markdownItalic cterm=underline
+endfunction
+
+" invoke manually by command for other file types
+command! -nargs=0 Prose call Prose()
+" ------------------------------------------
