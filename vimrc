@@ -32,6 +32,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'reedes/vim-pencil'
 Plugin 'reedes/vim-colors-pencil'
+Plugin 'mileszs/ack.vim'
 " Plugin 'itchyny/lightline.vim'
 " Plugin 'edkolev/tmuxline.vim'
 " Plugin 'vim-ctrlspace/vim-ctrlspace'
@@ -234,3 +235,6 @@ endfunction
 " invoke manually by command for other file types
 command! -nargs=0 Prose call Prose()
 " ------------------------------------------
+
+" Set ack to work with ag
+let g:ackprg = 'ag --nogroup --nocolor --column'
