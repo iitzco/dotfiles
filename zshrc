@@ -20,6 +20,10 @@ alias wvim='vim -c "Prose"'
 
 alias got='ps aux | grep'
 
+alias v='vim'
+
+alias ack='ag'
+
 cdAndTmux() {
         cd $1
         tmux
