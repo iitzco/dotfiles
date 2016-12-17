@@ -96,9 +96,6 @@ set expandtab
 
 " Increase update time (default 4000) for gitgutter
 set updatetime=300
-let g:gitgutter_sign_added = '⦿'
-let g:gitgutter_sign_removed = '✖'
-let g:gitgutter_sign_modified = '✶'
 
 " Airline conf
 set laststatus=2
@@ -242,7 +239,7 @@ command! -nargs=0 Prose call Prose()
 let g:ackprg = 'ag --nogroup --nocolor --column'
 
 " Window resizing
-" nnoremap <Right> :vertical resize +1<CR>
-" nnoremap <Left> :vertical resize -1<CR>
-" nnoremap <Up> :resize +1<CR>
-" nnoremap <Down> :resize -1<CR>
+nnoremap <Right> :vertical resize +1<CR>
+nnoremap <Left> :vertical resize -1<CR>
+nnoremap <Up> :resize +1<CR>
+nnoremap <Down> :resize -1<CR>
