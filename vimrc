@@ -33,8 +33,11 @@ Plugin 'reedes/vim-pencil'
 Plugin 'reedes/vim-colors-pencil'
 Plugin 'mileszs/ack.vim'
 
-" Plugin 'SirVer/ultisnips'
-" Plugin 'honza/vim-snippets'
+" Works with Python3
+Plugin 'SirVer/ultisnips'
+
+" Repository of snippets for UltiSnips
+Plugin 'honza/vim-snippets'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -230,3 +233,15 @@ nnoremap <Right> :vertical resize +1<CR>
 nnoremap <Left> :vertical resize -1<CR>
 nnoremap <Up> :resize +1<CR>
 nnoremap <Down> :resize -1<CR>
+
+" Trigger configuration. Do not use <tab> if you use
+" https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" Tell UltiSnips to use python3
+let g:UltiSnipsUsePythonVersion = 3
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
