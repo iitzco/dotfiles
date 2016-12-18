@@ -25,7 +25,6 @@ Plugin 'vim-scripts/AutoComplPop'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'scrooloose/syntastic'
 Plugin 'junegunn/goyo.vim'
-Plugin 'jlanzarotta/bufexplorer'
 Plugin 'kshenoy/vim-signature'
 Plugin 'maxbrunsfeld/vim-yankstack'
 Plugin 'tpope/vim-fugitive'
@@ -33,10 +32,7 @@ Plugin 'editorconfig/editorconfig-vim'
 Plugin 'reedes/vim-pencil'
 Plugin 'reedes/vim-colors-pencil'
 Plugin 'mileszs/ack.vim'
-" Plugin 'itchyny/lightline.vim'
-" Plugin 'edkolev/tmuxline.vim'
-" Plugin 'vim-ctrlspace/vim-ctrlspace'
-" Plugin 'Valloric/YouCompleteMe'
+
 " Plugin 'SirVer/ultisnips'
 " Plugin 'honza/vim-snippets'
 
@@ -169,16 +165,7 @@ nnoremap min :Goyo<CR>
 let g:goyo_width=100
 let g:goyo_height=100
 
-" YCM Settings
-
-" let g:ycm_min_num_of_chars_for_completion = 3
-" let g:ycm_autoclose_preview_window_after_completion = 1
-" let g:ycm_autoclose_preview_window_after_insertion = 1
-" let g:ycm_key_list_select_completion=[]
-" let g:ycm_key_list_previous_completion=[]
-" set completeopt-=preview
-
-nmap \\ \bt
+nnoremap \\ :CtrlPBuffer<CR>
 
 nmap z o<Esc>
 nmap Z O<Esc>
