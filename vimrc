@@ -241,7 +241,15 @@ let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " Tell UltiSnips to use python3
-let g:UltiSnipsUsePythonVersion = 3
+" let g:UltiSnipsUsePythonVersion = 3
 
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
+
+" Use custom snippets at ~/.vim/MySnippets/
+let g:UltiSnipsSnippetDirectories=["UltiSnips", "MySnippets"]
+
+" Use system clipboard
+" Use "+yy instead of yy for example
+"
+
