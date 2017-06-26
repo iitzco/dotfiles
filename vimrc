@@ -7,6 +7,8 @@ set encoding=utf-8
 " set the runtime path to include Vundle and initialize
 
 set rtp+=~/.vim/bundle/Vundle.vim
+
+
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
@@ -23,7 +25,7 @@ Plugin 'othree/html5.vim'
 Plugin 'alvan/vim-closetag'
 Plugin 'vim-scripts/AutoComplPop'
 Plugin 'terryma/vim-multiple-cursors'
-Plugin 'scrooloose/syntastic'
+" Plugin 'scrooloose/syntastic' "(Using ale for now)
 Plugin 'junegunn/goyo.vim'
 Plugin 'kshenoy/vim-signature'
 Plugin 'maxbrunsfeld/vim-yankstack'
@@ -32,6 +34,9 @@ Plugin 'editorconfig/editorconfig-vim'
 Plugin 'reedes/vim-pencil'
 Plugin 'reedes/vim-colors-pencil'
 Plugin 'mileszs/ack.vim'
+Plugin 'w0rp/ale'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'vimwiki/vimwiki'
 
 " Works with Python3
 Plugin 'SirVer/ultisnips'
@@ -145,21 +150,21 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
-" Syntastic settings
+" " Syntastic settings (disabled because of using ALE now)
 
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+" set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%*
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 0
-let g:syntastic_check_on_wq = 1
-let g:syntastic_auto_loc_list = 0
-let g:syntastic_enable_highlighting = 0
-let g:syntastic_stl_format = "Error: line:%F (%t)"
-let g:syntastic_error_symbol = "✗"
-let g:syntastic_warning_symbol = "⚠"
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_auto_loc_list = 1
+" let g:syntastic_check_on_open = 0
+" let g:syntastic_check_on_wq = 1
+" let g:syntastic_auto_loc_list = 0
+" let g:syntastic_enable_highlighting = 0
+" let g:syntastic_stl_format = "Error: line:%F (%t)"
+" let g:syntastic_error_symbol = "✗"
+" let g:syntastic_warning_symbol = "⚠"
 
 " Goyo setup
 
@@ -253,3 +258,12 @@ let g:UltiSnipsSnippetDirectories=["UltiSnips", "MySnippets"]
 " Use "+yy instead of yy for example
 "
 
+" Ale config 
+" let g:ale_sign_column_always = 1 " This breaks with some files
+" highlight clear ALEErrorSign "Disable highlight
+" highlight clear ALEWarningSign "Disable highlight
+let g:ale_statusline_format = ['⨉ %d', '⚠ %d', '⬥ ok']
+set statusline=%{ALEGetStatusLine()}
+
+let g:ale_sign_error = '>>'
+let g:ale_sign_warning = '--'

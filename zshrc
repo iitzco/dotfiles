@@ -24,11 +24,15 @@ alias v='vim'
 
 alias ack='ag'
 
+alias octave='octave-cli'
+
 cdAndTmux() {
         cd $1
         tmux
 }
 alias cmux=cdAndTmux
+
+alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
 
 anybar() {
     if [ $1 = "start" ]; then
@@ -39,3 +43,7 @@ anybar() {
 }
 
 alias noti=anybar
+eval $(/usr/libexec/path_helper -s)
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
