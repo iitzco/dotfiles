@@ -16,6 +16,8 @@ set -o vi
 
 alias tigs='tig status'
 
+alias find='find . -iname'
+
 alias wvim='vim -c "Prose"'
 
 alias got='ps aux | grep'
