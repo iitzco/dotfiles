@@ -267,3 +267,12 @@ set statusline=%{ALEGetStatusLine()}
 
 let g:ale_sign_error = '>>'
 let g:ale_sign_warning = '--'
+
+
+" Map \+p for tggling btw Paste & No Paste
+let mapleader = "\\"
+set pastetoggle=<leader>p
+
+" Tab movement with shift + (L or R)
+noremap <S-l> gt
+noremap <S-h> gT
